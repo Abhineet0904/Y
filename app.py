@@ -1,17 +1,15 @@
 import streamlit as st
 import requests
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 API_KEY = st.secrets["YOUTUBE_API_KEY"]
 SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 
-st.set_page_config(page_title="Mini YouTube", layout="wide")
+st.set_page_config(page_title="Cyber Mentor Tutorial", layout="wide")
 
-st.title("📺 Mini YouTube Clone")
-st.write("Search and play YouTube videos using the YouTube Data API")
+st.title("📺 Cyber Mentor Tutorial")
+st.write("Learn Web app penetration testing and bug bounty")
 
 # Search bar
 query = st.text_input("🔍 Enter search term", "")
@@ -50,5 +48,5 @@ if st.button("Search") and query:
                             st.caption(f"Channel: {channel}")
                             st.video(f"https://www.youtube.com/watch?v={video_id}")
     except requests.exceptions.RequestException as e:
-        st.error("❌ Failed to connect to YouTube API")
+        st.error("❌ Failed to connect to API")
         st.exception(e)
