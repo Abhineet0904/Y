@@ -19,8 +19,8 @@ if st.button("Search") and query:
         "part": "snippet",
         "q": query,
         "key": API_KEY,
-        "maxResults": 9,
-        "type": "playlist"
+        "maxResults": 20,
+        "type": "video"
     }
 
     try:
