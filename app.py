@@ -8,8 +8,7 @@ SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 
 st.set_page_config(page_title="Cyber Mentor Tutorial", layout="wide")
 
-st.title("📺 Cyber Mentor Tutorial")
-st.write("Learn Web app penetration testing and bug bounty")
+st.title("📺 Time pass")
 
 # Search bar
 query = st.text_input("🔍 Enter search term", "")
@@ -21,7 +20,7 @@ if st.button("Search") and query:
         "q": query,
         "key": API_KEY,
         "maxResults": 9,
-        "type": "video"
+        "type": "playlist"
     }
 
     try:
@@ -47,6 +46,8 @@ if st.button("Search") and query:
                             st.markdown(f"**{title}**")
                             st.caption(f"Channel: {channel}")
                             st.video(f"https://www.youtube.com/watch?v={video_id}")
+
+    
     except requests.exceptions.RequestException as e:
         st.error("❌ Failed to connect to API")
         st.exception(e)
