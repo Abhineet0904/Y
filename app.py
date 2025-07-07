@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-import os
 
 
 API_KEY = st.secrets["YOUTUBE_API_KEY"]
@@ -44,7 +43,7 @@ if st.button("Search") and query:
                         with cols[j]:
                             st.image(thumbnail, width=320)
                             st.markdown(f"**{title}**")
-                            st.caption(f"Channel: {channel}")
+                            #st.caption(f"Channel: {channel}")
                             st.video(f"https://www.youtube.com/watch?v={video_id}")
 
     
