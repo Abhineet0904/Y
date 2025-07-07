@@ -41,9 +41,9 @@ if st.button("Search") and query:
                         thumbnail = video["snippet"]["thumbnails"]["medium"]["url"]
 
                         with cols[j]:
-                            st.image(thumbnail, width=320)
+                            #st.image(thumbnail, width=320)
                             st.markdown(f"**{title}**")
-                            #st.caption(f"Channel: {channel}")
+                            st.caption(f"Channel: {channel}")
                             st.video(f"https://www.youtube.com/watch?v={video_id}")
 
     
