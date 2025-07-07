@@ -18,7 +18,7 @@ if st.button("Search") and query :
         "part" : "snippet",
         "q" : query,
         "key" : API_KEY,
-        "maxResults" : 20,
+        "maxResults" : 5,
         "type" : "video"
     }
 
