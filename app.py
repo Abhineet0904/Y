@@ -5,7 +5,7 @@ import requests
 API_KEY = st.secrets["YOUTUBE_API_KEY"]
 SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 
-st.set_page_config(page_title = "Cyber Mentor Tutorial", layout="wide")
+st.set_page_config(page_title = "Time pass", layout="wide")
 
 st.title("📺 Time pass")
 
